@@ -1,0 +1,29 @@
+#module-standardone-rent
+  .timer
+    color: #fff
+    max-width: 624px
+    margin: 0 auto
+    text-align: center
+    &__title
+      letter-spacing: 0.1em
+      font-size: 1em
+      font-weight: 600
+      text-transform: uppercase
+      padding-bottom: 1.7em
+      border-bottom: 1px solid #FFFFFF
+      margin-bottom: 1.1em
+    &__counters
+      justify-content: center
+      display: flex
+      font-size: 3em
+      font-weight: bold
+    &__label
+      font-weight: normal
+      margin-left: 0.3em
+      font-size: 0.3em
+      text-transform: uppercase
+      +xs
+        display: block
+    &__counter
+      &:not(:last-child)
+        margin-right: 2em

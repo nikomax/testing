@@ -1,0 +1,91 @@
+#module-standardone-rent
+  .about-block
+    position: relative
+    padding-top: 4em
+    &.is-modal
+      z-index: 999
+    .main-content-wrap
+      padding: 0 5em
+      +md
+        padding: 0 2em
+    &__items
+      padding: 12.3em 2em 13.2em
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      display: flex
+      justify-content: center
+      align-items: center
+      .about-item
+        width: 20.3em
+        +xs
+          width: 100%
+        &:not(:last-child)
+          margin-right: 2.4em
+          +xs
+            margin: 0 0 2em
+
+      +xs
+        display: block
+
+  .about-item
+    +smooth-font
+    color: #FFFFFF
+    &__btn
+      font-weight: 600
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-transform: uppercase
+      font-size: 1em
+      padding: 1.9em 1em
+      width: 100%
+      background-color: #FF6600
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.25)
+      transition: 0.3s
+      &:hover
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.25)
+    &__btn-icon
+      height: 50px
+      margin-bottom: 0.5em
+      img
+        height: 100%
+        width: auto
+  .about-item-modal
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: #363634
+    z-index: 999
+    overflow-y: auto
+    &__title
+      text-align: center
+      text-transform: uppercase
+      font-weight: 600
+      margin-bottom: 1em
+      font-size: 2em
+      span
+        font-size: 0.5em
+        font-weight: 400
+        display: block
+    &__text
+      max-width: 40em
+      margin: 0 auto
+      font-family: "Open Sans", sans-serif
+    &__content
+      padding: 3em
+    &__close
+      position: absolute
+      background-color: transparent
+      height: 30px
+      width: 30px
+      top: 50%
+      transform: translateY(-50%)
+      right: 3em
+      border: none
+      cursor: pointer
+      svg
+        height: 100%
+        width: 100%

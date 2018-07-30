@@ -1,0 +1,185 @@
+#module-standardone-rent
+  .cselect
+    text-align: center
+    width: 100%
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    font-size: 1.2em
+    &__selected
+      background-color: #FFFFFF
+      padding: 0.5em
+      display: block
+      transition: 0.3s
+      color: #363534
+      position: absolute
+      top: 100%
+      width: 100%
+      left: 0
+      z-index: 1000
+      margin: 10px 0 0
+      list-style: none
+      font-size: 1em
+      text-transform: uppercase
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.25)
+      +md
+        position: static
+    &__placeholder
+      position: relative
+      letter-spacing: 0.12em
+      color: #fff
+      background-color: #FF6600
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.25)
+      width: 100%
+      font-weight: 600
+      padding: 0.7em
+      text-transform: uppercase
+      &:hover
+        cursor: pointer
+      &.is-open
+        .cselect__arrow
+          transform: rotate(180deg) translateY(50%)
+      //+md
+      //  letter-spacing: 0.1em
+      //  padding: 0.5em
+    &__arrow
+      display: inline-block
+      transition: 0.3s
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 1em
+      height: 17px
+      width: 17px
+      svg
+        display: block
+        height: 100%
+        width: 100%
+    &__menu
+      text-transform: uppercase
+      position: absolute
+      top: 100%
+      width: 100%
+      left: 0
+      z-index: 1000
+      margin: 10px 0 0
+      padding: 0
+      list-style: none
+      font-size: 1em
+      background-color: #F1F1F2
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5)
+      +md
+        position: static
+      li
+        &:not(:last-child)
+          border-bottom: 1px solid #FFFFFF
+        a
+          padding: 0.5em
+          display: block
+          transition: 0.3s
+          color: #363534
+          list-style: none
+          &:hover
+            background-color: #fff
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.25)
+          &.is-active
+            color: #ffffff
+            background-color: #FF6600
+
+  .fselect
+    +OpenSans
+    width: 100%
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    font-size: 1em
+    &__selected
+      width: 100%
+      color: #F1F1F2
+      font-size: 1em
+      padding: 0.5em 1em
+      border: none
+      border-bottom: 1px solid #F1F1F2
+      background: transparent
+      &:hover
+        cursor: pointer
+      &.is-open
+        .fselect__arrow
+          transform: rotate(180deg) translateY(50%)
+    &__placeholder
+      text-transform: uppercase
+      width: 100%
+      color: #F1F1F2
+      font-size: 1em
+      padding: 0.5em 1em
+      border: none
+      border-bottom: 1px solid #F1F1F2
+      background: transparent
+      &:hover
+        cursor: pointer
+      &.is-open
+        .fselect__arrow
+          transform: rotate(180deg) translateY(50%)
+      &.is-error
+        border-color: #FF6600
+        color: #FF6600
+        .fselect__arrow
+          svg
+            stroke: #FF6600
+    &__arrow
+      display: inline-block
+      transition: 0.3s
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 10px
+      svg
+        stroke: #fff
+    &__menu
+      max-height: 10em
+      position: absolute
+      top: 100%
+      width: 100%
+      left: 0
+      z-index: 1000
+      margin: 10px 0 0
+      padding: 0
+      list-style: none
+      font-size: 1em
+      background-color: #F1F1F2
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5)
+      li
+        &:not(:last-child)
+          border-bottom: 1px solid #FFFFFF
+        a
+          padding: 0.5em
+          display: block
+          transition: 0.3s
+          color: #363534
+          list-style: none
+          &:hover
+            background-color: #fff
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.25)
+          &.is-active
+            color: #ffffff
+            background-color: #FF6600
+
+  .scroll-area
+    position: relative
+    margin: auto
+    width: 100%
+    max-height: 10em
+  .ps>.ps__scrollbar-y-rail>.ps__scrollbar-y
+    width: 4px
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.25)
+    border-radius: 10px
+    background-color: #FF6600
+    right: 0
+
+  .ps>.ps__scrollbar-y-rail
+    width: 4px
+    right: 0!important
+    opacity: 1
+
+  .ps__scrollbar-x-rail
+    display: none

@@ -1,0 +1,91 @@
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+=md
+  +r(1023)
+    @content
+
+=sm
+  +r(767)
+    @content
+
+=xs
+  +r(599)
+    @content
+
+=Roboto
+  font-family: 'Roboto Condensed',sans-serif
+
+=OpenSans
+  font-family: 'Open Sans', sans-serif
+
+
+=smooth-font
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+#module-standardone-rent
+  background-color: #363634
+  .rent-button
+    position: relative
+    text-align: center
+    width: 100%
+    display: inline-block
+    +OpenSans
+    text-transform: uppercase
+    color: #ffffff
+    font-size: 1.2em
+    padding: 0.4em
+    border: 1px solid #FF6600
+    background-color: #FF6600
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.25)
+    &.in-process
+      .spinner
+        opacity: 1
+    &:hover
+      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.25)
+    &.is-disabled
+      box-shadow: none
+      background-color: transparent
+      pointer-events: none
+      border-color: #ffffff
+    .spinner
+      animation: rotator 1.4s linear infinite
+      width: auto
+      height: 50%
+      position: absolute
+      opacity: 0
+      .path
+        stroke: #ffffff
+        stroke-dasharray: 187
+        stroke-dashoffset: 0
+        transform-origin: center
+        animation: dash 1.4s ease-in-out infinite
+
+  .back-btn
+    letter-spacing: 0.2em
+    text-transform: uppercase
+    color: #FFFFFF
+    opacity: 0.5
+    +OpenSans
+    font-size: 1.2em
+    +smooth-font
+    &:hover
+      color: #FF6600
+
+
+@keyframes rotator
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(270deg)
+@keyframes dash
+  0%
+    stroke-dashoffset: 187
+  50%
+    stroke-dashoffset: 187/4
+    transform: rotate(135deg)
+  100%
+    stroke-dashoffset: 187
+    transform: rotate(450deg)

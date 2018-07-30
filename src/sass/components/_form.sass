@@ -1,0 +1,128 @@
+#module-standardone-rent
+  .form-item
+    width: 100%
+    position: relative
+    &.is-error
+      .form-item__input
+        border-color: #FF6600
+      .form-item__label
+        color: #FF6600
+    &__input
+      width: 100%
+      +OpenSans
+      color: #F1F1F2
+      font-size: 1em
+      padding: 0.5em 1em
+      border: none
+      border-bottom: 1px solid #F1F1F2
+      background: transparent
+      &:focus
+        outline: none
+      &:-webkit-autofill
+        box-shadow: none
+        -webkit-text-fill-color: #F1F1F2 !important
+        color: #F1F1F2 !important
+        background: transparent !important
+    &__label
+      pointer-events: none
+      position: absolute
+      bottom: 0.5em
+      left: 1em
+      text-transform: uppercase
+      transition: 0.3s
+      &.is-focused
+        transform: translateY(-100%)
+    &__error
+      position: absolute
+      right: 0
+      bottom: 0
+      transform: translateY(100%)
+      color: #FF6600
+      font-size: 0.8em
+
+  .form
+    min-height: calc(100vh - 9em)
+    padding: 2em 5.4em 7em
+    +smooth-font
+    +xs
+      padding: 2em 2em 7em
+    &__container
+      max-width: 44em
+      margin: 0 auto
+      color: #F1F1F2
+      &--l
+        max-width: 46em
+    &__desc
+      +smooth-font
+      +OpenSans
+      font-size: 1em
+      margin-bottom: 2em
+    &__checkbox
+      +OpenSans
+      display: flex
+      justify-content: center
+    &__title
+      color: #fff
+      margin-bottom: 2.9em
+      text-align: center
+      font-size: 2em
+      text-transform: uppercase
+      span
+        display: block
+        font-size: 1.3em
+        font-weight: 600
+    &__line
+      display: flex
+      +OpenSans
+      margin: 0 -1em 3.1em
+      .form-item
+        max-width: 21em
+        margin: 0 1em
+      +xs
+        display: block
+        margin: 0 0 2em
+        .form-item
+          max-width: 100%
+          margin: 0 0 2em
+          &:last-child
+            margin-bottom: 0
+      &--center
+        justify-content: center
+    &__btn
+      max-width: 20.5em
+      margin: 7em auto 0
+    &__repeat
+      font-size: 0.8em
+      max-width: 29.4em
+      margin: 5em auto 0
+    &__repeat-text
+      margin-bottom: 1em
+      a
+        color: #FF6600
+
+  .rcheckbox
+    position: relative
+    color: #ffffff
+    font-size: 1.2em
+    &__icon
+      cursor: pointer
+      background-color: transparent
+      position: absolute
+      width: 24px
+      height: 24px
+      border: 1px solid #ffffff
+      top: 50%
+      left: -1em
+      transform: translate(-100%, -50%)
+      &.is-ckecked
+        border-color: #FF6600
+      &:hover
+        border-color: #FF6600
+      svg
+        position: absolute
+        fill: #FF6600
+        height: 14px
+        width: 18px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
